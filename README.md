@@ -1,22 +1,50 @@
 # JWT Authentication and Authorization with Spring Boot 3 and Spring Security 6
 
-1) signup : POST
-========
-URL = http://localhost:8080/api/v1/auth/signup
-Header = Authorization-Owner : myrequest
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#Signup">Signup</a></li>
+    <li><a href="#roadmap">Signin</a></li>
+    <li><a href="#getall">GET ALL</a></li>
+    <li><a href="#update">UPDATE</a></li>
+    <li><a href="#get">GET</a></li>
+    <li><a href="#delete">DELETE</a></li>
+    <li><a href="#refresh-token">refresh-token</a></li>
+    <li><a href="#Error response">Error response</a></li>
+  </ol>
+</details>
 
-request josn body
-==================
+<!-- GETTING STARTED -->
+### Signup : 
+
+1. URL http://localhost:8080/api/v1/auth/signup
+2. add Header "Authorization-Owner" value is myrequest
+3. method type POST
+
+### Request Body
+```sh
 {
-    "firstName":"Saravanakumar",
-    "lastName":"Ramasamy",
-    "email":"rskzoniac+admin@gmail.com",
-    "password":"12345",
-    "role": "ADMIN"
+	"firstName":"Saravanakumar",
+	"lastName":"Ramasamy",
+	"email":"rskzoniac+admin@gmail.com",
+	"password":"12345",
+	"role": "ADMIN"
 }
+```
 
-respose
-==========
+### Respose Body
+```sh
 {
     "status": 1,
     "message": "success",
@@ -42,15 +70,15 @@ respose
     },
     "responseTime": "11-10-2023 06:11:46"
 }
-
+```
 
 2) signin : POST
 =============
+
 URL : http://localhost:8080/api/v1/auth/signin
 Header = Authorization-Owner : myrequest
 
-request josn body
-==================
+### Request JSON Body
 {
     "email":"rskzoniac+admin@gmail.com",
     "password":"12345"
@@ -131,8 +159,7 @@ Header = Authorization-Owner : myrequest
 authorization type : bearer type 
 	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyc2t6b25pYWNAZ21haWwuY29tIiwiaWF0IjoxNjk3MDA0Nzg1LCJleHAiOjE2OTcwOTExODV9.7WI4cKU8qHnjNhDDM5Ze8f7k_hf_0za3HoswJEKylXs
 
-request josn body
-==================
+### Request JSON Body
     {
         "firstName":"Saravanakumar",
         "lastName":"R"
@@ -203,7 +230,7 @@ respose
 }
 
 6) delete : DELETE
-==================
+===============
 URL :  http://localhost:8080/api/v1/users/2
 Header = Authorization-Owner : myrequest
 authorization type : bearer type 
@@ -211,6 +238,7 @@ authorization type : bearer type
 
 respose
 ========
+
 {
     "status": 1,
     "message": "User successfully deleted!",
@@ -220,12 +248,13 @@ respose
     "responseTime": "11-10-2023 09:52:02"
 }
 
-7) Refresh-token : POST
+
+7) refresh-token : POST
 ======================
 Header = Authorization-Owner : myrequest
 URL :  http://localhost:8080/api/v1/auth/refresh-token
-authorization type : bearer type 
-	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyc2t6b25pYWNAZ21haWwuY29tIiwiaWF0IjoxNjk3MDA0Nzg1LCJleHAiOjE2OTcwOTExODV9.7WI4cKU8qHnjNhDDM5Ze8f7k_hf_0za3HoswJEKylXs
+authorization type : bearer type
+
 respose
 ========
 {
@@ -238,8 +267,12 @@ respose
     "responseTime": "11-10-2023 09:53:06"
 }
 
-8) Error respose
-================
+
+8) Error response
+============
+
+respose
+========
 {
     "apierror": {
         "errorCode": "Expired JWT token",
