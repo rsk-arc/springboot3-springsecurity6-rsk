@@ -1,6 +1,6 @@
 # JWT Authentication and Authorization with Spring Boot 3 and Spring Security 6
 
-1)signup : POST
+1) signup : POST
 ========
 URL = http://localhost:8080/api/v1/auth/signup
 Header = Authorization-Owner : myrequest
@@ -14,7 +14,6 @@ request josn body
     "password":"12345",
     "role": "ADMIN"
 }
-
 
 respose
 ==========
@@ -204,7 +203,7 @@ respose
 }
 
 6) delete : DELETE
-===============
+==================
 URL :  http://localhost:8080/api/v1/users/2
 Header = Authorization-Owner : myrequest
 authorization type : bearer type 
@@ -212,7 +211,6 @@ authorization type : bearer type
 
 respose
 ========
-
 {
     "status": 1,
     "message": "User successfully deleted!",
@@ -222,13 +220,12 @@ respose
     "responseTime": "11-10-2023 09:52:02"
 }
 
-
-7) refresh-token : POST
+7) Refresh-token : POST
 ======================
 Header = Authorization-Owner : myrequest
 URL :  http://localhost:8080/api/v1/auth/refresh-token
-authorization type : bearer type
-
+authorization type : bearer type 
+	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyc2t6b25pYWNAZ21haWwuY29tIiwiaWF0IjoxNjk3MDA0Nzg1LCJleHAiOjE2OTcwOTExODV9.7WI4cKU8qHnjNhDDM5Ze8f7k_hf_0za3HoswJEKylXs
 respose
 ========
 {
@@ -241,12 +238,8 @@ respose
     "responseTime": "11-10-2023 09:53:06"
 }
 
-
-8) Error response
-============
-
-respose
-========
+8) Error respose
+================
 {
     "apierror": {
         "errorCode": "Expired JWT token",
