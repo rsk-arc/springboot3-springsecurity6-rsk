@@ -27,14 +27,21 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#signup">Signup</a></li>
-    <li><a href="#signin">Signin</a></li>
-    <li><a href="#getall">Get All</a></li>
-    <li><a href="#get">Get</a></li>
-    <li><a href="#update">Update</a></li>
-    <li><a href="#delete">Delete</a></li>
-    <li><a href="#refreshtoken">Refresh Token</a></li>
-    <li><a href="#errorresponse">Error Response</a></li>
+    <li>
+          <a href="#getting-started">Code Started</a>
+          <ul>
+	    <li><a href="#signup">Signup</a></li>
+	    <li><a href="#signin">Signin</a></li>
+	    <li><a href="#getall">Get All</a></li>
+	    <li><a href="#get">Get</a></li>
+	    <li><a href="#update">Update</a></li>
+	    <li><a href="#delete">Delete</a></li>
+	    <li><a href="#refreshtoken">Refresh Token</a></li>
+	    <li><a href="#errorresponse">Error Response</a></li>
+          </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
@@ -42,13 +49,26 @@
 <a name="about-the-project"></a>
 ## About The Project 
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+This is a sample CRUD application built using Spring Boot 3 and secured with Spring Security 6. The project's main goal is to demonstrate how to create a web application that allows users to perform CRUD operations on a set of entities (e.g., "Tasks," "Products," "Customers") while ensuring proper authentication and authorization through Spring Security.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+### Key Features
 
+1. User Registration and Authentication: Users can register for accounts, log in, and log out. Passwords are securely hashed and stored in the database.
+2. Role-Based Access Control: The application supports two user roles, "User" and "Admin." Users have limited access, while Admins have full control over CRUD operations.
+3. CRUD Operations: Users with appropriate permissions can perform Create, Read, Update, and Delete operations on the entities in the system.
+4. Database Storage: Data is stored in a relational database (e.g., MySQL, PostgreSQL, H2) using Spring Data JPA.
+5. RESTful API: The application exposes a RESTful API for interacting with the entities, making it easy to integrate with other systems or build front-end interfaces.
+
+### Technologies Used
+
+* Spring Boot
+* Spring Security
+* Spring Data JPA
+* Java 17
+* Database (e.g., MySQL, PostgreSQL, H2)
+* RESTful API
+* Maven or Gradle for dependency management
+* Angular, React, or other front-end technologies (if using web-based views)
 
 <a name="prerequisites"></a><p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
@@ -355,3 +375,22 @@ _Below is an example of how you can instruct your audience on installing and set
     }
 }
 ```
+
+<a name="contributing"><p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+
+<a name="contact"><p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- CONTACT -->
+## Contact
+
+My Name - [Saravanakumar Ramasamy](https://www.linkedin.com/in/rsaravanakumar)
+
+Project : [springboot3-springsecurity6-rsk](https://github.com/saronila/springboot3-springsecurity6-rsk)
+
