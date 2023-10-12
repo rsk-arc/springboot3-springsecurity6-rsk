@@ -50,10 +50,8 @@ Here's why:
 * You should implement DRY principles to the rest of your life :smile:
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<a name="prerequisites"></a><p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
-<a name="prerequisites"></a>
 ### Prerequisites 
 
 Creating a Maven project involves a few prerequisite steps to set up your development environment correctly. Here are the key steps you should follow before creating a Maven project.
@@ -63,7 +61,7 @@ Creating a Maven project involves a few prerequisite steps to set up your develo
 * Mmost developers prefer to use an Integrated Development Environment (IDE) like Eclipse, IntelliJ IDEA, or NetBeans for Java development.
 * If you're using an IDE, make sure to install the necessary plugins or extensions for Maven support.
 
-<a name="installation"></a>
+<a name="installation"></a><p align="right">(<a href="#readme-top">back to top</a>)</p>
 ### Installation 
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
@@ -77,8 +75,7 @@ _Below is an example of how you can instruct your audience on installing and set
    app.request.header.validation=false;
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-<a name="signup"></a>
+<a name="signup"></a><p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- SIGNUP CODE STARTED -->
 ## Signup 
 
@@ -155,10 +152,9 @@ _Below is an example of how you can instruct your audience on installing and set
 }
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-<a name="getall"></a>
+<a name="getall"></a><p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GET ALL CODE STARTED -->
-## GET ALL
+## Get All
 
 1. get all url like this "http://localhost:xxxx/api/v1/users"
 2. Add Header "Authorization-Owner" value is "myrequest" optional 
@@ -214,10 +210,9 @@ _Below is an example of how you can instruct your audience on installing and set
 }
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-<a name="get"></a>
+<a name="get"></a><p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GET CODE STARTED -->
-## GET
+## Get
 
 1. get url like this "http://localhost:xxxx/api/v1/users/#ACCESSTOKEN#" and replace your primary key
 2. Add Header "Authorization-Owner" value is "myrequest" optional 
@@ -253,10 +248,9 @@ _Below is an example of how you can instruct your audience on installing and set
 }
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-<a name="update"></a>
+<a name="update"></a><p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- UPDATE CODE STARTED -->
-## UPDATE
+## Update
 
 1. update url like this "http://localhost:xxxx/api/v1/users/#ACCESSTOKEN#" and replace your primary key
 2. Add Header "Authorization-Owner" value is "myrequest" optional 
@@ -300,10 +294,9 @@ _Below is an example of how you can instruct your audience on installing and set
 }
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-<a name="delete"></a>
+<a name="delete"></a><p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- DELETE CODE STARTED -->
-## DELETE 
+## Delete
 
 1. delete url like this "http://localhost:xxxx/api/v1/users/#ACCESSTOKEN#" and replace your primary key
 2. Add Header "Authorization-Owner" value is "myrequest" optional 
@@ -322,10 +315,9 @@ _Below is an example of how you can instruct your audience on installing and set
 }
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-<a name="refreshtoken"></a>
+<a name="refreshtoken"></a><p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- REFRESH-TOKEN CODE STARTED -->
-## REFRESH-TOKEN
+## Refresh Token
 
 1. refresh-token url like this "http://localhost:xxxx/api/v1/auth/refresh-token"
 2. Add Header "Authorization-Owner" value is "myrequest" optional 
@@ -345,10 +337,10 @@ _Below is an example of how you can instruct your audience on installing and set
 }
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-<a name="errorresponse"></a>
+<a name="errorresponse"></a><p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- ERROR RESPONSE CODE STARTED -->
-## ERROR RESPONSE
+## Error Response
+
 1. if received the internal server error response
 
 ### Response Body
