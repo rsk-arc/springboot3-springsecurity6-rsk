@@ -1,4 +1,17 @@
-# JWT Authentication and Authorization with Spring Boot 3 and Spring Security 6
+
+<!-- PROJECT LOGO -->
+
+<div align="center">
+
+  <h1 align="center">Spring Boot 3 and Spring Security 6</h1>
+
+  <p align="center">
+   CRUD (Create, Read, Update, Delete), JWT Authentication and Authorization Maven Project!
+    <br />
+  </p>
+</div>
+
+<a name="readme-top"></a>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -14,23 +27,64 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#Signup">Signup</a></li>
-    <li><a href="#roadmap">Signin</a></li>
-    <li><a href="#getall">GET ALL</a></li>
-    <li><a href="#update">UPDATE</a></li>
-    <li><a href="#get">GET</a></li>
-    <li><a href="#delete">DELETE</a></li>
-    <li><a href="#refresh-token">refresh-token</a></li>
-    <li><a href="#Error response">Error response</a></li>
+    <li><a href="#signup">Signup</a></li>
+    <li><a href="#signin">Signin</a></li>
+    <li><a href="#getall">Get All</a></li>
+    <li><a href="#get">Get</a></li>
+    <li><a href="#update">Update</a></li>
+    <li><a href="#delete">Delete</a></li>
+    <li><a href="#refreshtoken">Refresh Token</a></li>
+    <li><a href="#errorresponse">Error Response</a></li>
   </ol>
 </details>
 
-<!-- GETTING STARTED -->
-### Signup : 
+<!-- ABOUT THE PROJECT -->
+<a name="about-the-project"></a>
+## About The Project 
 
-1. URL http://localhost:8080/api/v1/auth/signup
-2. add Header "Authorization-Owner" value is myrequest
-3. method type POST
+There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+
+Here's why:
+* Your time should be focused on creating something amazing. A project that solves a problem and helps others
+* You shouldn't be doing the same tasks over and over like creating a README from scratch
+* You should implement DRY principles to the rest of your life :smile:
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+<a name="prerequisites"></a>
+### Prerequisites 
+
+Creating a Maven project involves a few prerequisite steps to set up your development environment correctly. Here are the key steps you should follow before creating a Maven project.
+* Maven is a Java-based build tool, so you need to have Java installed on your system. You can download and install the latest version of the Java Development Kit (JDK) from the Oracle website or use an open-source alternative like OpenJDK.
+* Ensure that the JAVA_HOME environment variable is set to your JDK installation directory.
+* Add the bin directory of the JDK to your system's PATH variable.
+* Mmost developers prefer to use an Integrated Development Environment (IDE) like Eclipse, IntelliJ IDEA, or NetBeans for Java development.
+* If you're using an IDE, make sure to install the necessary plugins or extensions for Maven support.
+
+<a name="installation"></a>
+### Installation 
+
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/saronila/springboot3-springsecurity6-rsk.git
+   ```
+2. Enable/disable header validation settings in `Application.properties` by default false
+   ```js
+   app.request.header.validation=false;
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<a name="signup"></a>
+<!-- SIGNUP CODE STARTED -->
+## Signup 
+
+1. Signup url like this http://localhost:xxxx/api/v1/auth/signup
+2. Add Header "Authorization-Owner" value is "myrequest" optional 
+3. Method type is POST
 
 ### Request Body
 ```sh
@@ -43,7 +97,7 @@
 }
 ```
 
-### Respose Body
+### Response Body
 ```sh
 {
     "status": 1,
@@ -72,20 +126,24 @@
 }
 ```
 
-2) signin : POST
-=============
+<a name="signin"></a> <p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- SIGNIN CODE STARTED -->
+## Signin 
 
-URL : http://localhost:8080/api/v1/auth/signin
-Header = Authorization-Owner : myrequest
+1. Signup url like this http://localhost:xxxx/api/v1/auth/signin
+2. Add Header "Authorization-Owner" value is "myrequest" optional 
+3. Method type is POST
 
-### Request JSON Body
+### Request Body
+```sh
 {
     "email":"rskzoniac+admin@gmail.com",
     "password":"12345"
 }
+```
 
-respose
-==========
+### Response Body
+```sh
 {
     "status": 1,
     "message": "success",
@@ -95,17 +153,20 @@ respose
     },
     "responseTime": "11-10-2023 06:13:05"
 }
+```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<a name="getall"></a>
+<!-- GET ALL CODE STARTED -->
+## GET ALL
 
-3) GET ALL : GET
-==========
-URL :  http://localhost:8080/api/v1/users
-Header = Authorization-Owner : myrequest
-authorization type : bearer type 
-	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyc2t6b25pYWNAZ21haWwuY29tIiwiaWF0IjoxNjk3MDA0Nzg1LCJleHAiOjE2OTcwOTExODV9.7WI4cKU8qHnjNhDDM5Ze8f7k_hf_0za3HoswJEKylXs
+1. get all url like this "http://localhost:xxxx/api/v1/users"
+2. Add Header "Authorization-Owner" value is "myrequest" optional 
+3. Method type is GET
+4. Add Header "Authorization" value is "bearer #ACCESSTOKEN#" and replace your accessToken here
 
-respose
-========
+### Response Body
+```sh
 {
     "status": 1,
     "message": "success",
@@ -151,58 +212,20 @@ respose
     },
     "responseTime": "11-10-2023 06:32:34"
 }
+```
 
-4) UPDATE : PUT
-===============
-URL :  http://localhost:8080/api/v1/users/1
-Header = Authorization-Owner : myrequest
-authorization type : bearer type 
-	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyc2t6b25pYWNAZ21haWwuY29tIiwiaWF0IjoxNjk3MDA0Nzg1LCJleHAiOjE2OTcwOTExODV9.7WI4cKU8qHnjNhDDM5Ze8f7k_hf_0za3HoswJEKylXs
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<a name="get"></a>
+<!-- GET CODE STARTED -->
+## GET
 
-### Request JSON Body
-    {
-        "firstName":"Saravanakumar",
-        "lastName":"R"
-    }
-
-respose
-==========
-{
-    "status": 1,
-    "message": "success",
-    "data": {
-        "payload": {
-            "id": 1,
-            "firstName": "Saravanakumar",
-            "lastName": "R",
-            "email": "rskzoniac+admin@gmail.com",
-            "password": "$2a$10$9hXBsQh14kz7MadXYhr1qeaUfDT9hevG54Pf1DZulvlcURCl80U7a",
-            "role": "ADMIN",
-            "enabled": true,
-            "accountNonExpired": true,
-            "credentialsNonExpired": true,
-            "authorities": [
-                {
-                    "authority": "ADMIN"
-                }
-            ],
-            "username": "rskzoniac+admin@gmail.com",
-            "accountNonLocked": true
-        }
-    },
-    "responseTime": "11-10-2023 09:55:03"
-}
-
-
-5) get user : GET
-================
-URL :  http://localhost:8080/api/v1/users/1
-Header = Authorization-Owner : myrequest
-authorization type : bearer type 
-	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyc2t6b25pYWNAZ21haWwuY29tIiwiaWF0IjoxNjk3MDA0Nzg1LCJleHAiOjE2OTcwOTExODV9.7WI4cKU8qHnjNhDDM5Ze8f7k_hf_0za3HoswJEKylXs
-
-respose
-==========
+1. get url like this "http://localhost:xxxx/api/v1/users/#ACCESSTOKEN#" and replace your primary key
+2. Add Header "Authorization-Owner" value is "myrequest" optional 
+3. Method type is GET
+4. Add Header "Authorization" value is "bearer #ACCESSTOKEN#" and replace your accessToken here
+ 
+### Response Body
+```sh
 {
     "status": 1,
     "message": "success",
@@ -228,17 +251,67 @@ respose
     },
     "responseTime": "11-10-2023 09:54:20"
 }
+```
 
-6) delete : DELETE
-===============
-URL :  http://localhost:8080/api/v1/users/2
-Header = Authorization-Owner : myrequest
-authorization type : bearer type 
-	eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyc2t6b25pYWNAZ21haWwuY29tIiwiaWF0IjoxNjk3MDA0Nzg1LCJleHAiOjE2OTcwOTExODV9.7WI4cKU8qHnjNhDDM5Ze8f7k_hf_0za3HoswJEKylXs
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<a name="update"></a>
+<!-- UPDATE CODE STARTED -->
+## UPDATE
 
-respose
-========
+1. update url like this "http://localhost:xxxx/api/v1/users/#ACCESSTOKEN#" and replace your primary key
+2. Add Header "Authorization-Owner" value is "myrequest" optional 
+3. Method type is PUT
+4. Add Header "Authorization" value is "bearer #ACCESSTOKEN#" and replace your accessToken here
 
+### Request Body
+```sh
+{
+	"firstName":"Saravanakumar",
+	"lastName":"R"
+}
+```
+
+### Response Body
+```sh
+{
+    "status": 1,
+    "message": "success",
+    "data": {
+        "payload": {
+            "id": 1,
+            "firstName": "Saravanakumar",
+            "lastName": "R",
+            "email": "rskzoniac+admin@gmail.com",
+            "password": "$2a$10$9hXBsQh14kz7MadXYhr1qeaUfDT9hevG54Pf1DZulvlcURCl80U7a",
+            "role": "ADMIN",
+            "enabled": true,
+            "accountNonExpired": true,
+            "credentialsNonExpired": true,
+            "authorities": [
+                {
+                    "authority": "ADMIN"
+                }
+            ],
+            "username": "rskzoniac+admin@gmail.com",
+            "accountNonLocked": true
+        }
+    },
+    "responseTime": "11-10-2023 09:55:03"
+}
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<a name="delete"></a>
+<!-- DELETE CODE STARTED -->
+## DELETE 
+
+1. delete url like this "http://localhost:xxxx/api/v1/users/#ACCESSTOKEN#" and replace your primary key
+2. Add Header "Authorization-Owner" value is "myrequest" optional 
+3. Method type is DELETE
+4. Add Header "Authorization" value is "bearer #ACCESSTOKEN#" and replace your accessToken here
+
+### Response Body
+```sh
 {
     "status": 1,
     "message": "User successfully deleted!",
@@ -247,16 +320,20 @@ respose
     },
     "responseTime": "11-10-2023 09:52:02"
 }
+```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<a name="refreshtoken"></a>
+<!-- REFRESH-TOKEN CODE STARTED -->
+## REFRESH-TOKEN
 
-7) refresh-token : POST
-======================
-Header = Authorization-Owner : myrequest
-URL :  http://localhost:8080/api/v1/auth/refresh-token
-authorization type : bearer type
+1. refresh-token url like this "http://localhost:xxxx/api/v1/auth/refresh-token"
+2. Add Header "Authorization-Owner" value is "myrequest" optional 
+3. Method type is POST
+4. Add Header "Authorization" value is "bearer #ACCESSTOKEN#" and replace your accessToken here
 
-respose
-========
+### Response Body
+```sh
 {
     "status": 1,
     "message": "success",
@@ -266,13 +343,16 @@ respose
     },
     "responseTime": "11-10-2023 09:53:06"
 }
+```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<a name="errorresponse"></a>
+<!-- ERROR RESPONSE CODE STARTED -->
+## ERROR RESPONSE
+1. if received the internal server error response
 
-8) Error response
-============
-
-respose
-========
+### Response Body
+```sh
 {
     "apierror": {
         "errorCode": "Expired JWT token",
@@ -282,3 +362,4 @@ respose
         "responseTime": "11-10-2023 06:33:11"
     }
 }
+```
