@@ -24,16 +24,21 @@ import com.rsk.security.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping("/api/v1/users")
 @RequiredArgsConstructor
 @Slf4j
+@Tag(name = "Users", description = "Users management APIs")
 public class UserController {
 
 	private final UserService userService;
 	
 	// http://localhost:8080/api/users
 	// build create User REST API
+	@Operation(summary = "This method is used to get the Create User.")
     @PostMapping
     public ResponseEntity<ResponseBean> createUser(@RequestBody User user){
     	log.info("UserController ... createUser");
@@ -50,6 +55,7 @@ public class UserController {
 
     // build get user by id REST API
     // http://localhost:8080/api/users/1
+	@Operation(summary = "This method is used to get the user info.")
     @GetMapping("{id}")
     public ResponseEntity<ResponseBean> getUserById(@PathVariable("id") Integer userId){
     	log.info("UserController ... getUserById");
@@ -66,6 +72,7 @@ public class UserController {
 
     // Build Get All Users REST API
     // http://localhost:8080/api/users
+    @Operation(summary = "This method is used to get the Users.")
     @GetMapping
     public ResponseEntity<ResponseBean> getAllUsers() throws ApplicationException{
     	log.info("UserController ... getAllUsers");
@@ -87,6 +94,7 @@ public class UserController {
 
     // Build Update User REST API
     // http://localhost:8080/api/users/1
+    @Operation(summary = "This method is used to update the user info.")
     @PutMapping("{id}")
     public ResponseEntity<ResponseBean> updateUser(@PathVariable("id") Integer userId, @RequestBody User user){
     	log.info("UserController ... updateUser");
@@ -103,6 +111,7 @@ public class UserController {
 
     // Build Delete User REST API
     // http://localhost:8080/api/users/1
+    @Operation(summary = "This method is used to delete the user data.")
     @DeleteMapping("{id}")
     public ResponseEntity<ResponseBean> deleteUser(@PathVariable("id") Integer userId){
     	log.info("UserController ... deleteUser");
